@@ -1,4 +1,11 @@
-.. _installing-packages:
+.. _
+   It's recommended to write ``{sys.executable}`` rather than plain ``python`` in
+   order to ensure that commands are run in the Python installation matching
+   the currently running notebook (which may not be the same Python
+   installation that the ``python`` command refers to).
+
+.. Note:: Due to the way most Linux distributions are handling the Python 3
+   migration, Linux installing-packages:
 
 ===================
 Installing Packages
@@ -74,14 +81,7 @@ please install the latest 3.x version from `python.org`_ or refer to the
         In [1]: import sys
                 !{sys.executable} --version
         Python 3.6.3
-
-   It's recommended to write ``{sys.executable}`` rather than plain ``python`` in
-   order to ensure that commands are run in the Python installation matching
-   the currently running notebook (which may not be the same Python
-   installation that the ``python`` command refers to).
-
-.. Note:: Due to the way most Linux distributions are handling the Python 3
-   migration, Linux users using the system Python without creating a virtual
+users using the system Python without creating a virtual
    environment first should replace the ``python`` command in this tutorial
    with ``python3`` and the ``python -m pip`` command with ``python3 -m pip --user``. Do *not*
    run any of the commands in this tutorial with ``sudo``: if you get a
